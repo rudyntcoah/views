@@ -14,6 +14,9 @@
 <body ng-app="postRegister" ng-controller="PostController as postCtrl">
     <header>
         <div class="container">
+            <a class="back" href="#" onclick="window.history.back();">
+                <img src="img/back-icon.svg">
+            </a>
             <a class="logo" href="https://ntcoahuila.azurewebsites.net">
                 <img src="img/covidRescuerLogo.svg">
             </a>
@@ -21,6 +24,7 @@
     </header>
     <div class="container">
         <div class="log-box">
+
             <form name="register" ng-submit="postCtrl.postForm()" method="POST">
                 <div class="from-group">
                     <label>User Name </label>
