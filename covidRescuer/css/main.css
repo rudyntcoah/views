@@ -64,7 +64,7 @@ header .right-menu {
 }
 header .right-menu .linked-text {
   color: #0392EA;
-  padding-top: 7px;
+  padding-top: 0px;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -77,6 +77,9 @@ header .right-menu a {
 }
 header .right-menu a:hover {
   color: #027bc5;
+}
+header .right-menu > .group-btn > .btn00 {
+  color: #ffffff;
 }
 .flex-container {
   display: flex;
