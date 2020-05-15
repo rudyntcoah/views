@@ -1,98 +1,120 @@
+
+
+
+
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Covid Rescuer</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-</head>
-
-<body ng-app="postLogin" ng-controller="PostController as postCtrl">
-    <header>
-        <div class="container">
-            <a class="back" href="#" onclick="window.history.back();">
-                <img src="img/back-icon.svg">
-            </a>
-            <a class="logo" href="https://ntcoahuila.azurewebsites.net">
-                <img src="img/covidRescuerLogo.svg">
-            </a>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Covid Rescuer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="icon.png">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    
+    
+    
+    <body>
+        <header>
+            <div class="container">
+                <a class="back" href="#" onclick ="window.history.back();">
+                    <img src="img/back-icon.svg">
+                </a>
+                <a class="logo" href="https://ntcoahuila.azurewebsites.net">
+                    <img src="img/covidRescuerLogo.svg">
+                </a>
+    
+                <div class="right-menu">
+                    <div class="group-btn">
+                        <a class="btn00" href="login.jsp">
+                            Iniciar sesión
+                        </a>
+                        <a class="linked-text" href="register.jsp">
+                            o Regístrate
+                        </a>
+                    </div>
+                </div>
+    
+    
+            </div>
+    
+        </header>
+      
+        <div class="container push">
+            <div class="flex-container">
+                <div class="item">
+                    <a href="mexico.jsp">
+                        <div class="circle">
+                            <img src="img/mexico.svg">
+                        </div>
+                        <h2>
+                           Contagios por estado
+                        </h2>
+                    </a>
+    
+    
+                    <a class="tag orange" href="coahuila.jsp">
+                        Ver Coahuila
+                    </a>
+    
+    
+                </div>
+    
+                <div class="item">
+                    <a href="covid_area.jsp">
+                        <div class="circle">
+                            <img src="img/person.svg">
+                        </div>
+                        <h2>
+                            Zonas<br>COVID-19
+                        </h2>
+                    </a>
+    
+        
+    
+                    <div class="tag">
+                        4 Zona(s) registrada(s)
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <a href="covid_hospital.jsp">
+                        <div class="circle">
+                            <img src="img/hospital.svg">
+                        </div>
+                        <h2>
+                            Hospitales <!--COVID-19-->Disponibles
+                        </h2>
+                    </a>
+    
+        
+    
+                    <div class="tag">
+                        30 Registrado(s)
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <a href="covid_request.jsp">
+                        <div class="circle">
+                            <img src="img/help.svg">
+                        </div>
+                        <h2>
+                            Solicitud de Emergencia
+                        </h2>
+                    </a>
+    
+        
+    
+                    <div class="tag">
+                        1 Registrada(s)
+                    </div>
+                </div>
+    
+            </div>
         </div>
-    </header>
-
-    <div class="container">
-        <div class="log-box">
-            <form name="login" ng-submit="postCtrl.postForm()" method="POST">
-
-                <div class="form-control">
-                    <label>User Name </label>
-                    <input type=Text name="username" id="inputUsername" ng-model="postCtrl.inputData.username" required>
-                </div>
-
-                <div class="from-control">
-                    <span style="color:red" ng-show="login.username.$invalid">
-                        <span ng-show="login.username.$error.required">** Username is required.</span>
-                    </span>
-                </div>
-
-
-                <div class="from-control">
-                    <label>Password </label>
-                    <input type=password name="password" id="inputPassword" class="form-control" required
-                        ng-model="postCtrl.inputData.password"><br>
-                </div>
-
-                <div class="from-control">
-                    <span style="color:red" ng-show="login.password.$invalid">
-                        <span ng-show="login.password.$error.required">** Password is required.</span>
-                </div>
-
-                <div class="right">
-                    <input type=reset value="Cancel" class="btn00 graybtn">
-                    <input type=submit value="Login" ng-disabled="login.$invalid" class="btn00">
-                </div>
-                <div class="alert alert-danger" ng-show="errorMsg">
-                    &nbsp;&nbsp;{{errorMsg}}
-                </div>
-
-            </form>
         </div>
-    </div>
-
-
-
-    <script>
-        var app = angular.module('postLogin', []);
-        app.controller('PostController', function ($scope, $http) {
-            this.postForm = function () {
-                var encodedString = 'username=' +
-                    encodeURIComponent(this.inputData.username) +
-                    '&password=' +
-                    encodeURIComponent(this.inputData.password);
-                $http({
-                        method: 'POST',
-                        url: 'jsp/userauth.jsp',
-                        data: encodedString,
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                        }
-                    })
-                    .then(function (response) {
-                        if (response.data.trim() === 'success') {
-
-                            window.location.href = 'index.jsp';
-                        } else {
-                            $scope.errorMsg = "Username and password do not match.";
-                        }
-                    })
-            }
-        });
-    </script>
-
-
-</body>
-
-</html>
+    
+    </html>
