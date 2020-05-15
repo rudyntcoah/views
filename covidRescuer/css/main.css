@@ -129,7 +129,10 @@ header .right-menu .edit {
   font-size: 29px;
   margin-bottom: 10px;
 }
-.tag {
+.flex-container a .circle:hover {
+  box-shadow: 0px 0px 14px #808080;
+}
+.flex-container .tag {
   display: inline-block;
   border-radius: 4px;
   background-color: #eeeeee;
@@ -257,9 +260,6 @@ form .control {
 .graybtn:hover {
   background-color: #9c9c9c;
 }
-.group-btn {
-  /*display: none;*/
-}
 .orange {
   background-color: #ea8e03 !important;
   color: #FFFFFF !important;
@@ -268,3 +268,4 @@ form .control {
 .orange:hover {
   background-color: #ad6b07 !important;
 }
+/*BUTTONS*/

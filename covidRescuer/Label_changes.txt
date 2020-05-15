@@ -1,0 +1,73 @@
+On
+index
+    or Registro = o Regístrate
+
+Login.jsp
+    Nombre de usuario = Usuario
+    cancel = Cancelar 
+    Login = Ingresar
+
+register.jsp
+    Nombre de usuario = Usuario
+    Id de correo electrónico = correo electrónico
+    Registro = Registrar
+    **Se requiere EmailId. = Se requiere correo electrónico.
+
+Mexico.jsp
+    Nombre del estado = Estado
+    Seleccione el nombre del estado = Selecciona...
+    Color de zona = Nivel de alerta
+    seleccionar el color = Selecciona...
+    Caso confirmado = Casos confirmados
+    Caso activo = Casos activos
+    Recuperados = Pacientes recuperados
+    Deceased = Fallecidos
+
+coahuila.jsp
+    Nombre de la ciudad = Municipio
+    Selecciona La cuidad = Selecciona...
+    Color de zona = Nivel de alerta
+    seleccionar color = Selecciona...
+    Caso confirmado = Casos confirmados
+    Caso activo = Casos activos
+    Recuperados = Pacientes recuperados
+    Deceased = Fallecidos
+
+add_new_covid_area.jsp
+    Marcar nueva área impactada = Añadir nueva zona
+    Latitud: = Latitud
+    Longtidue: = Longitud
+    Save = Agregar zona
+
+add_new_hospital.jsp
+    Available bed = Camas disponibles
+    Occupied Bed = Camas ocupadas
+    Longtidue = Longitud
+    Add new Hospital = Agregar Hospital
+
+add_new_request.jsp
+    Seleccione = Selecciona...
+    solicitud = Descripción de la solicitud
+    Longtidue: = Longitud
+    Save = Agregar solicitud
+
+myimpactedarea.jsp
+    Editar ubicación del área afectada = Editar ubicación de zona afectada
+    Longtidue: = Longitud
+    Delete = Eliminar
+    Save = Guardar
+
+myhospital.jsp
+    Actualizar los detalles del hospital = Editar información del hospital
+    Available bed = Camas disponibles
+    Occupied Bed = Camas ocupadas
+    Longtidue = Longitud
+    Delete = Eliminar
+    Save = Guardar
+
+myrequest.jsp
+    Seleccione = Selecciona...
+    solicitud = Solicitud
+    Longtidue = Longitud
+    Delete = Eliminar
+    Save = Guardar
