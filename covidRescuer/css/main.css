@@ -60,11 +60,12 @@ header .right-menu {
   vertical-align: middle;
   text-align: right;
   right: 0;
-  top: 8px;
+  top: 13px;
 }
 header .right-menu .linked-text {
   color: #0392EA;
   padding-top: 0px;
+  margin-top: 2px;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -72,7 +73,6 @@ header .right-menu .linked-text {
 header .right-menu a {
   text-decoration: none;
   font-weight: bold;
-  margin: 5px;
   color: #0392EA;
 }
 header .right-menu a:hover {
@@ -80,6 +80,19 @@ header .right-menu a:hover {
 }
 header .right-menu > .group-btn > .btn00 {
   color: #ffffff;
+}
+header .right-menu > .graybtn {
+  margin-top: 0px !important;
+  vertical-align: top;
+}
+header .right-menu .edit {
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+  font-weight: bold;
+  margin-right: 15px;
+  margin-top: 5px;
+  color: #0392EA;
 }
 .flex-container {
   display: flex;
